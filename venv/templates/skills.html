@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Skills Offered</title>
+    <style>
+        body {
+            background-color: lightblue;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            font-size: 24px;
+            color: #555;
+            cursor: pointer;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script>
+        function toggleVisibility(elementId) {
+            var element = document.getElementById(elementId);
+            if (element.style.display === 'none') {
+                element.style.display = 'block';
+            } else {
+                element.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Skills Offered</h1>
+        <ul>
+            <li onclick="toggleVisibility('network-info')">Networking</li>
+            <div id="network-info" class="hidden">
+                <p>Configuring and troubleshooting network systems.</p>
+            </div>
+
+            <li onclick="toggleVisibility('hardware-info')">Hardware Repair</li>
+            <div id="hardware-info" class="hidden">
+                <p>Diagnosing and fixing hardware issues.</p>
+            </div>
+
+            <li onclick="toggleVisibility('software-info')">Software Installation</li>
+            <div id="software-info" class="hidden">
+                <p>Installing and configuring software applications.</p>
+            </div>
+
+            <li onclick="toggleVisibility('os-info')">Operating Systems</li>
+            <div id="os-info" class="hidden">
+                <p>Managing and maintaining different operating systems.</p>
+            </div>
+
+            <li onclick="toggleVisibility('database-info')">Database Management</li>
+            <div id="database-info" class="hidden">
+                <p>Designing and optimizing database systems.</p>
+            </div>
+
+            <li onclick="toggleVisibility('cybersecurity-info')">Cybersecurity</li>
+            <div id="cybersecurity-info" class="hidden">
+                <p>Implementing security measures to protect systems.</p>
+            </div>
+
+            <li onclick="toggleVisibility('webdev-info')">Web Development</li>
+            <div id="webdev-info" class="hidden">
+                <p>Building and maintaining websites.</p>
+            </div>
+        </ul>
+    </div>
+</body>
+</html>

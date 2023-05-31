@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>  FIRSTNAME  </th>
+            <th>  MIDDLENAME  </th>
+            <th>  LASTNAME  </th>
+            <th>  EMAIL  </th>
+            <th>  USN NUMBER  </th>
+            <th>  YEAR LEVEL  </th>
+            <th>  ACTION  </th>
+        </tr>
+
+        {% for d in data %}
+            <tr>
+                <td> {{ d[0] }} </td>
+                <td> {{ d[1] }} </td>
+                <td> {{ d[2] }} </td>
+                <td> {{ d[3] }} </td>
+                <td> {{ d[4] }} </td>
+                <td> {{ d[5] }} </td>
+                <td> 
+                    <a href="/delete_process/{{ d[4] }}">
+                        Delete
+                    </a>
+
+                    <a href="/update_process_one/{{ d[4] }}">
+                        Update
+                    </a>
+                    
+
+                </td>
+            </tr>
+        {% endfor %}
+
+
+
+    </table>
+
+
+
+
+    
+</body>
+</html>

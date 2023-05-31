@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <body>
+        <center>
+            <h1>UPDATE PAGE</h1>
+            <form action="{{ url_for('update_process_two') }}" method="POST">
+                <input type="text" name="first-name" value="{{ data[0] }}">
+                <input type="text" name="middle-name" value="{{ data[1] }}">
+                <input type="text" name="last-name" value="{{ data[2] }}">
+                <input type="text" name="email" value="{{ data[3] }}">
+                <input type="text" name="usn" value="{{ data[4] }}" readonly>
+                <input type="text" name="year" value="{{ data[5] }}">
+                <button type="submit">Update</button>
+            </form>
+        </center>
+    </body>
+    
+
+
+
+    
+</body>
+</html>
