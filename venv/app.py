@@ -32,7 +32,7 @@ def register():
         cur.execute("INSERT INTO tbl_user VALUES('{}' ,'{}' ,'{}' ,'{}','{}','{}')".format(fname, mname, lname,email,usn,year))
         conn.commit()
         # Save data to a database or perform necessary actions
-        return 'Registration successful!'
+        return redirect(url_for('home'))
     
     return render_template('register.html')
 @app.route('/skills')
